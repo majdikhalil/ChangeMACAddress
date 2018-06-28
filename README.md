@@ -1,11 +1,11 @@
 # ChangeMACAddress
 
-#Find the list of connected devices on the network
-ifconfig | grep broadcast
-arp -a
 
-#find your mac address 
-ifconfig en0 | grep ether
+ifconfig | grep broadcast #Find the list of connected devices on the network
+arp -a #List them 
 
-#set new mac address
-sudo ifconfig en0 ether xx:xx:xx:xx:xx:xx
+
+ifconfig en0 | grep ether #find your current mac address
+
+
+sudo ifconfig en0 ether xx:xx:xx:xx:xx:xx #set new mac address
